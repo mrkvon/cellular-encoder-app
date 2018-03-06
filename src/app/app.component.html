@@ -1,30 +1,20 @@
-<div class="title">
+<header>
   <h1>
     Cellular encoder
   </h1>
   <div>
-    fun with cellular automata
+    a birthday cypher
   </div>
-</div>
+</header>
 
-<div>
-  <label>rule {{this.rule}}</label>
-  <mat-slider length="600px" min="0" max="255" step="1" [value]="rule" #slider (input)="onKey(slider.value)"></mat-slider>
-</div>
-<div>
-  <label>{{this.rows}} rows</label>
-  <mat-slider min="1" max="100" step="1" [value]="rows" #slider2 (input)="onKeyRows(slider2.value)"></mat-slider>
-</div>
+<app-automaton [ascii]="ascii"></app-automaton>
 
-<canvas
-  #rules
-  width="625"
-  height="65"
->
-</canvas>
+<app-ascii (change)=(onChange($event))></app-ascii>
 
-<canvas
-  #automaton
-  width="600"
-  height="320"
->
+<footer>
+  <span>Hance k narozeninám</span>
+  &#x1f382;
+  <span>Made in <a href="https://kanthaus.online/en">Kanthaus</a></span>
+
+  <a id="github-link" href="http://www.github.com/mrkvon/cellular-encoder-app"><img src="./assets/github.png" alt="github link"/></a>
+</footer>

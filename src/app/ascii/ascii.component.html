@@ -1,0 +1,33 @@
+<!--input maxlength="1" [value]="character" #inputCharacter (keyup)="onKey(inputCharacter.value)"-->
+<mat-slider min="0" max="127" step="1" [value]="decimal" #slider (input)="onKey(slider.value)"></mat-slider>
+
+<!-- ascii code picture -->
+<div>
+  <canvas
+    #ascii
+    width="212"
+    height="32"
+  >
+  </canvas>
+</div>
+
+<!-- character representations -->
+<div id="character">
+  {{character}}
+</div>
+
+<div id="ascii-title">
+  ASCII:
+</div>
+
+<div>
+  {{decimal}}
+</div>
+
+<div>
+  {{binary}} (binary)
+</div>
+
+<div>
+  {{hex}} (hex)
+</div>

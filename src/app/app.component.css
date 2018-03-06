@@ -1,19 +1,35 @@
-.title {
+header {
   text-align: center;
   margin-bottom: 2em;
+  margin: 3em auto;
 }
 
-mat-slider {
-  width: 300px;
+header div {
+  color: #ff4081;
+  font-style: italic;
+  font-size: 1.5em;
 }
 
-mat-slider,
-canvas {
+header h1 {
+  font-size: 3em;
+  font-family: 'Libre Baskerville', serif;
+}
+
+footer {
+  margin: 3em auto;
+}
+
+footer #github-link {
   display: block;
-  margin: 0 auto;
+  margin-top: 2em;
 }
 
-label {
-  display: block;
-  text-align: center;
+footer #github-link img {
+  height: 20px;
+  width: 20px;
+}
+
+footer a {
+  color: #ff4081;
+  text-decoration: none;
 }

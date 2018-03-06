@@ -1,0 +1,13 @@
+mat-slider {
+  width: 300px;
+}
+
+#character {
+  font-size: 4em;
+  font-family: 'Libre Baskerville', serif;
+}
+
+#ascii-title {
+  margin: 0.5em auto;
+  font-size: 1.2em;
+}

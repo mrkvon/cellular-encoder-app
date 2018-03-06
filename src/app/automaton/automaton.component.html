@@ -1,0 +1,37 @@
+<div>
+  <label>rule {{this.rule}}</label>
+  <mat-slider length="600px" min="0" max="255" step="1" [value]="rule" #slider (input)="onKey(slider.value)"></mat-slider>
+</div>
+<div>
+  <label>{{this.rows}} rows</label>
+  <mat-slider min="1" max="100" step="1" [value]="rows" #slider2 (input)="onKeyRows(slider2.value)"></mat-slider>
+</div>
+
+<canvas
+  #rules
+  width="625"
+  height="65"
+>
+</canvas>
+
+<div class="automaton-wrapper">
+  <canvas
+    id="automaton"
+    #automaton
+    width="600"
+    height="320"
+  >
+  </canvas>
+  <canvas
+    id="automaton-overlay"
+    #automatonOverlay
+    width="600"
+    height="320"
+  >
+  </canvas>
+</div>
+
+<div id="cellular-encoded-ascii">
+  <span *ngIf="encodedAscii[0] >= 0">[{{ encodedAscii[0] }}, {{ encodedAscii[1] }}]</span>
+  <i title="try more rows?" *ngIf="encodedAscii[0] < 0">not found</i>
+</div>
